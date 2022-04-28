@@ -7,7 +7,7 @@ import ContinuousSlider from '../component/Slider'
 export default function Home() {
   let array_1 = [{name: "johndoe", description: "english major"}, {name: "Yuheon Joh", description: "computer science"},
   {name : "Hello", description: "world"}]
-  let array_2 = array_1.map((element)=>{return <DescriptionCard name={element.name} description={element.description}></DescriptionCard>})
+  let array_2 = array_1.map((element, i)=>{return <DescriptionCard name={element.name} description={element.description} key={i}></DescriptionCard>})
   return (
     <div className={styles.container}>
       <Head>
